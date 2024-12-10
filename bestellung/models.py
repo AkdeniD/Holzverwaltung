@@ -39,7 +39,7 @@ class Lieferung(models.Model):
 
 class Artikel(models.Model):
     mindestbestand = models.IntegerField(("Mindestbestand"))
-    bezeichnung = models.CharField(("Bezeichnung"), max_length=50)
+    bezeichnung = models.CharField(("Bezeichnung"), max_length=250)
     liefereinheit = models.CharField(("Liefereinheit"), max_length=50)
     bemerkung = models.TextField(("Bemerkung"), null=True, blank=True)
     ekpreis = models.IntegerField(("Einkaufseinzelpreis in €-Cent"))
