@@ -11,3 +11,4 @@ admin.site.register(Lagerplatz)
 @admin.register(Artikel)
 class ArtikelAdmin(admin.ModelAdmin):
     search_fields = ['bezeichnung', 'bemerkung']
+    list_display = ['bezeichnung', 'liefereinheit', 'ekpreis']
