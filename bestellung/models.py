@@ -40,13 +40,13 @@ class Lieferung(models.Model):
 class Artikel(models.Model):
     mindestbestand = models.IntegerField(("Mindestbestand"))
     bezeichnung = models.CharField(("Bezeichnung"), max_length=50)
-    liefereinheit = models.CharField("Liefereinheit", max_length=50)
-    bemerkung = models.TextField(_("Bemerkung"), null=True, blank=True)
+    liefereinheit = models.CharField(("Liefereinheit"), max_length=50)
+    bemerkung = models.TextField(("Bemerkung"), null=True, blank=True)
     ekpreis = models.IntegerField(("Einkaufseinzelpreis in €-Cent"))
     
     class Meta:
-        verbose_name = _("Artikel")
-        verbose_name_plural = _("Artikel")
+        verbose_name = ("Artikel")
+        verbose_name_plural = ("Artikel")
 
     def __str__(self):
         return self.bezeichnung
