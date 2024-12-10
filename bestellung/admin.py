@@ -16,5 +16,4 @@ class ArtikelAdmin(admin.ModelAdmin):
 
 @admin.register(Lagerplatz)
 class LagerplatzAdmin(admin.ModelAdmin):
-    list_display = ['liefereinheit']
     list_filter = ['artikel']
