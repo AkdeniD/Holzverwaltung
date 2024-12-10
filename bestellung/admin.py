@@ -4,6 +4,10 @@ from.models import Lieferant, Lieferung, Artikel, Lieferposition, Lagerplatz
 
 admin.site.register(Lieferant)
 admin.site.register(Lieferung)
-admin.site.register(Artikel)
+#admin.site.register(Artikel)
 admin.site.register(Lieferposition)
 admin.site.register(Lagerplatz)
+
+@admin.register(Artikel)
+class ArtikelAdmin(admin.ModelAdmin):
+    search_fields = ['bezeichnung', 'bemerkung']
