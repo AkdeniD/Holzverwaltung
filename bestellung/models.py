@@ -29,7 +29,7 @@ class Lieferung(models.Model):
         verbose_name_plural = ("Lieferungen")
  
     def __str__(self):
-        return self.name
+        return f"{self.datum}/{self.lieferant}"
  
     def get_absolute_url(self):
         return reverse("Lieferung_detail", kwargs={"pk": self.pk})
